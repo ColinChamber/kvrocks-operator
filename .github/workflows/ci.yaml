@@ -60,3 +60,14 @@ jobs:
           version: latest
           skip-pkg-cache: true
           args: "--out-${NO_FUTURE}format colored-line-number --disable errcheck"
+
+  check-docker:
+    name: Check Docker image
+    needs: [lint-build]
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: false
