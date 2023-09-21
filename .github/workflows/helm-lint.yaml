@@ -3,7 +3,7 @@ name: helm-lint
 on:
   push:
     branches:
-    - unstable
+    - feat-add-ci-for-charts-release
   pull_request:
     branches: [ unstable ]
 

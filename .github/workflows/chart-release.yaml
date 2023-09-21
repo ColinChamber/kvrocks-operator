@@ -2,7 +2,7 @@ name: chart-release
 on:
   push:
     branches:
-      - unstable
+      - feat-add-ci-for-charts-release
 
 jobs:
   chart:
